@@ -1,5 +1,13 @@
 /*
  * Programming Challenge 1
+ * First programming challenge for CSCI 21. Complete the main, greet, and 
+ * hasExperience functions to pass the unit tests. All sections labeled
+ * with "CODE HERE" need to be filled in.
+ *
+ * Kevan Johnson
+ * Date created: 1/27/14
+ * Last date modified: 1/29/14
+ *
  */
 #include <cassert>
 #include <iostream>
