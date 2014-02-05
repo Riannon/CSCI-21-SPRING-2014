@@ -136,10 +136,6 @@ double stringToDouble (string value)
 bool stringToBool (string value)
 {
 	// CODE HERE
-	if ( == 'T')
-	{
-	    return true;
-	}
 }
 
 /*
