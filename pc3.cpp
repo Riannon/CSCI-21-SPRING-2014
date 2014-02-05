@@ -1,5 +1,13 @@
 /*
  * Programming Challenge 3
+ * Third programming challenge for CSCI 21. Complete the main, greet, and 
+ * hasExperience functions to pass the unit tests. All sections labeled
+ * with "CODE HERE" need to be filled in.
+ *
+ * Kevan Johnson
+ * Date created: 2/03/14
+ * Last date modified: 2/04/14
+ *
  */
 #include <cassert>
 #include <cmath>
