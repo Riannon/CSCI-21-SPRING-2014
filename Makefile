@@ -20,3 +20,5 @@ pc2: pc2.cpp
 	
 pc1: pc1.cpp
 	g++ -o pc1 pc1.cpp
+	
+all: pc1 pc2 pc3 pc4

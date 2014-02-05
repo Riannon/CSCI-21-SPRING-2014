@@ -60,10 +60,9 @@ int main (int argc, char* argv[])
 string makeString (string label, double value, char separator)
 {
 	// CODE HERE
-	stringstream fullString;
-	fullString << label << " " << separator << " " << value;
-	string catString = fullString.str();
-	return catString;
+    stringstream catString;
+	catString << label << " " << separator << " " << value;
+	return catString.str();
 }
 
 /*
@@ -96,16 +95,16 @@ char stringToChar (string value)
 int stringToInt (string value)
 {
 	// THIS FUNCTION PROVIDED AS AN EXAMPLE
+	bool goodInput = false;
 	int ivalue = 0;
-	stringstream converter(value);
-	converter.exceptions(ios_base::failbit);
-
+    stringstream converter(value);
+    converter.exceptions(ios_base::failbit | ios_base::badbit);
 	try
 	{
 		converter >> ivalue;
+		goodInput = true;
 	}
 	catch (ios_base::failure f) {}
-	
 	return ivalue;
 }
 
@@ -120,6 +119,17 @@ int stringToInt (string value)
 double stringToDouble (string value)
 {
 	// CODE HERE
+	bool goodInput = false;
+	double dvalue = 0.0;
+	stringstream converter(value);
+	converter.exceptions(ios_base::failbit | ios_base::badbit);
+	try
+	{
+		converter >> dvalue;
+		goodInput = true;
+	}
+	catch (ios_base::failure f) {}
+	return dvalue;
 }
 
 /*
@@ -136,6 +146,11 @@ double stringToDouble (string value)
 bool stringToBool (string value)
 {
 	// CODE HERE
+	if (value[0] == 'T' || value[0] == 't') 
+	{
+	    return true;
+	}
+	return false;
 }
 
 /*
