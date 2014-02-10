@@ -5,6 +5,12 @@
 # Programmer: Kevan Johnson
 #
 
+
+# Target for programming challenge 6
+# Date completed: 2-12-2014
+#pc5: pc6.cpp
+#	g++ -o pc6 pc6.cpp
+	
 # Target for programming challenge 5
 # Date completed: 2-10-2014
 pc5: pc5.cpp
