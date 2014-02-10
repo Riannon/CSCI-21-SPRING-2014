@@ -4,7 +4,9 @@
 #
 # Programmer: Kevan Johnson
 #
-
+FLAGS = -Wall -Wextra -Werror -pedantic
+#filename: filename.cpp
+#    g++ $(FLAGS) filename.cpp -o filename
 
 # Target for programming challenge 6
 # Date completed: 2-12-2014
@@ -14,7 +16,7 @@
 # Target for programming challenge 5
 # Date completed: 2-10-2014
 pc5: pc5.cpp
-	g++ -o pc5 pc5.cpp
+	g++ $(FLAGS) pc5 -o pc5.cpp
 	
 # Target for programming challenge 4
 # Date completed: 2-5-2014
@@ -39,6 +41,3 @@ pc1: pc1.cpp
 all: pc1 pc2 pc3 pc4 pc5
 
 
-#FLAGS = -Wall -Wextra -Werror -pedantic
-#filename: filename.cpp
-#    g++ $(FLAGS) filename.cpp -o filename
