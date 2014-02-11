@@ -4,6 +4,18 @@
 #
 # Programmer: Kevan Johnson
 #
+# Grader comments 2014.02.10
+#
+# Use the makefile for building your code before
+# you turn in the assigment. That way you know
+# everything works as it should. Your code won't
+# build with all the flags turned on. I think Boyd
+# will let me warn you once rather than giving you
+# a zero on the assignment. But be sure to use the
+# makefile and make sure your code compiles with all
+# the warnings in place. If you need help with it,
+# give me a shout in class and I'll be glad to help. --Rob
+#
 FLAGS = -Wall -Wextra -Werror -pedantic
 #filename: filename.cpp
 #    g++ $(FLAGS) filename.cpp -o filename
