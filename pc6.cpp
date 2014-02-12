@@ -74,7 +74,7 @@ template <typename X, typename A>
 void btassert(A assertion);
 void unittest ();
 
-int main ()  // REMOVED THE UNUSED PARAMETERS (int argc, char* argv[]) - throwing an error for being unused
+int main () // REMOVED THE UNUSED PARAMETERS (int argc, char* argv[]) - throwing an error for being unused
 {
 	unittest();
 	return 0;
