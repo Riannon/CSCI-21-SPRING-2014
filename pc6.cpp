@@ -74,7 +74,7 @@ template <typename X, typename A>
 void btassert(A assertion);
 void unittest ();
 
-int main ()
+int main ()  // REMOVED THE UNUSED PARAMETERS (int argc, char* argv[]) - throwing an error for being unused
 {
 	unittest();
 	return 0;
@@ -96,9 +96,9 @@ int main ()
 string prepareForDisplay (int values[], int size, char separator) {
     stringstream catString;
     for (int i = 0; i < size; i++) {
-        if (size < size-1)
+        if (i < size-1)
         catString << values[i] << separator;
-	    else
+	    else if (i == size-1)
 	    catString << values[i];
     }
     return catString.str();
