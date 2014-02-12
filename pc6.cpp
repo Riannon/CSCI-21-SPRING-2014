@@ -74,7 +74,7 @@ template <typename X, typename A>
 void btassert(A assertion);
 void unittest ();
 
-int main (int argc, char* argv[])
+int main ()
 {
 	unittest();
 	return 0;
@@ -94,12 +94,14 @@ int main (int argc, char* argv[])
  *         specified separator character
  */
 string prepareForDisplay (int values[], int size, char separator) {
-    string str;
+    stringstream catString;
     for (int i = 0; i < size; i++) {
-            str += values[i];
-    string toDisplay = str;
-return toDisplay;
+        if (size < size-1)
+        catString << values[i] << separator;
+	    else
+	    catString << values[i];
     }
+    return catString.str();
 }
 
 /*
