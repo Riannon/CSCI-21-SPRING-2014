@@ -10,7 +10,7 @@ FLAGS = -Wall -Wextra -Werror -pedantic
 # Target for programming challenge 6
 # Date completed: 2-12-2014
 pc6: pc6.cpp
-	g++ $(FLAGS) pc6 -o pc6.cpp
+	g++ pc6 -o pc6.cpp
 	
 # Target for programming challenge 5
 # Date completed: 2-10-2014
