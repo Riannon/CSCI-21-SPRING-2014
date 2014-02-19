@@ -1,12 +1,14 @@
 /*
  * Programming Challenge 5
- * First programming challenge for CSCI 21. Complete the main, greet, and 
- * hasExperience functions to pass the unit tests. All sections labeled
- * with "CODE HERE" need to be filled in.
+ * First programming challenge for CSCI 21. Complete the hello, printMessage, 
+ * getAnswer, findLarger, getStats, and buildMessage functions to pass the unit 
+ * tests. All sections labeled with "CODE HERE" need to be filled in.
  *
  * Kevan Johnson
  * Date created: 2/09/14
- * Last date modified: 2/10/14
+ * Date Modified and turned in: 2/10/14
+ * Last date modified: 2/19/14 
+ * Reason for last modification: To fix warnings that show as erors with new Makefile checks so 'all' option works
  *
  */
  
@@ -88,7 +90,7 @@ template <typename X, typename A>
 void btassert(A assertion);
 void unittest ();
 
-int main (int argc, char* argv[])
+int main ()
 {
 	unittest();
 
@@ -156,7 +158,8 @@ int findLarger(int n1, int n2) {
 int getStats(string s, int &alphaCount, int &digitCount) {
     alphaCount = 0;
     digitCount = 0;
-for (int i = 0; i < s.length(); i++) {
+    int strSize = s.length();
+for (int i = 0; i < strSize; i++) {
     if (isalpha(s[i])) {
         alphaCount++;
     }
@@ -164,7 +167,7 @@ for (int i = 0; i < s.length(); i++) {
         digitCount++;
     }
 }
-return s.length();
+return strSize;
 }
 
 /*
@@ -178,8 +181,9 @@ return s.length();
  * @return - Returns concatenated string.
  */
 string buildMessage(string s, bool allCaps) {
+    int strSize = s.length();
     if (allCaps == true) {
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < strSize; i++) {
             s[i] = toupper(s[i]);
         }
     }
