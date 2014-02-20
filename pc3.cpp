@@ -1,12 +1,15 @@
 /*
  * Programming Challenge 3
- * Third programming challenge for CSCI 21. Complete the main, greet, and 
- * hasExperience functions to pass the unit tests. All sections labeled
- * with "CODE HERE" need to be filled in.
+ * Third programming challenge for CSCI 21. Complete the goldilocks, 
+ * rockScissorPaper, asciiValue, toLower, toUpper, and getCharacter
+ * functions to pass the unit tests. All sections labeled with 
+ * "CODE HERE" need to be filled in.
  *
  * Kevan Johnson
  * Date created: 2/03/14
- * Last date modified: 2/04/14
+ * Date Modified and turned in: 2/04/14
+ * Last date modified: 2/19/14 
+ * Reason for last modification: To fix errors and warning that showed up with new Makefile checks so 'all' option works
  *
  */
 #include <cassert>
@@ -27,7 +30,7 @@ template <typename X, typename A>
 void btassert(A assertion);
 void unittest ();
 
-int main (int argc, char* argv[])
+int main ()
 {
 	unittest();
 	
@@ -56,8 +59,7 @@ int main (int argc, char* argv[])
  *        on invalid argument)
  * @return the output specified in the documentation above 
  */
-string goldilocks (string item, int number)
-{
+string goldilocks (string item, int number) {
 	// CODE HERE
 	if (item == "porridge") {
 	   switch(number) {
@@ -98,7 +100,7 @@ string goldilocks (string item, int number)
 	            break;
 	   } // End switch
 	} // End else-if
-	
+return 0;
 }
 
 /*
@@ -191,7 +193,8 @@ int asciiValue (char c)
 string toLower (string input)
 {
 	// CODE HERE
-	for (int i = 0; i < input.length(); i++) {
+	int size = input.length();
+	for (int i = 0; i < size; i++) {
 	    input[i] = tolower(input[i]);
 	}
 	return input;
@@ -205,8 +208,8 @@ string toLower (string input)
 string toUpper (string input)
 {
 	// CODE HERE
-	// CODE HERE
-	for (int i = 0; i < input.length(); i++) {
+	int size = input.length();
+	for (int i = 0; i < size; i++) {
 	    input[i] = toupper(input[i]);
 	}
 	return input;

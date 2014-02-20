@@ -6,7 +6,9 @@
  *
  * Kevan Johnson
  * Date created: 1/29/14
- * Last date modified: 1/29/14
+ * Date Modified and turned in: 1/29/14
+ * Last date modified: 2/19/14 
+ * Reason for last modification: To fix errors and warning that showed up with new Makefile checks so 'all' option works
  *
  */
 #include <cassert>
@@ -23,7 +25,7 @@ template <typename X, typename A>
 void btassert(A assertion);
 void unittest ();
 
-int main (int argc, char* argv[])
+int main ()
 {
 	unittest();
 	
@@ -103,6 +105,7 @@ double launchHumanCannonball (double initialVelocity, double launchAngle)
 	double flighttime = (yveloc) * 2 / -9.8;
 	// 5 compute horizontal/x distance traveled [xdistance = xveloc * flighttime]
 	double xdistance = xveloc * flighttime;
+	return xdistance;
     
 }
 

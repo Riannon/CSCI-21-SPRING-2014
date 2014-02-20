@@ -1,12 +1,15 @@
 /*
  * Programming Challenge 4
- * Fourth programming challenge for CSCI 21. Complete the main, greet, and 
- * hasExperience functions to pass the unit tests. All sections labeled
- * with "CODE HERE" need to be filled in.
+ * Fourth programming challenge for CSCI 21. Complete the makeString, 
+ * stringToChar, stringToInt, stringToDouble, and stringToBool functions
+ * to pass the unit tests. All sections labeled with "CODE HERE" need to
+ * be filled in.
  *
  * Kevan Johnson
  * Date created: 2/04/14
- * Last date modified: 2/05/14
+ * Date Modified and turned in: 2/05/14
+ * Last date modified: 2/19/14 
+ * Reason for last modification: To fix warnings that show as erors with new Makefile checks so 'all' option works
  *
  */
 #include <cassert>
@@ -31,7 +34,7 @@ void btassert(A assertion);
 void interactiveTest ();
 void unittest ();
 
-int main (int argc, char* argv[])
+int main ()
 {
 	string input;
 	cout << "[1] Do interactive test, [2] Skip to unit test: ";
