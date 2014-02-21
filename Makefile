@@ -48,6 +48,8 @@ pc2: pc2.cpp
 pc1: pc1.cpp
 	g++ $(FLAGS) pc1.cpp -o pc1
 	
+	
+	
 all: pc1 pc2 pc3 pc4 pc5 pc6 pc7 project1
 
 
