@@ -47,7 +47,8 @@ public:
     float convertDistance (float distance, char targetUnits);
 
 private:
-
+    float convertedTemp;
+    float convertedDistance;
     /* Called by convertTemperature if target units is 'M' */
     float fahrenheitToCelsius (float temp);
 
@@ -77,59 +78,55 @@ int main ()
 
 float Converter::convertTemperature (float temp, char targetUnits)
 {
-    float newTemp = 0;
+    convertedTemp = 0;
     if (targetUnits == 'M')
     {
-        fahrenheitToCelsius(temp);
-        temp = newTemp;
+        convertedTemp = fahrenheitToCelsius(temp);
     }
     else if (targetUnits == 'I')
     {
-        celsiusToFahrenheit(temp);
-        temp = newTemp;
+        convertedTemp = celsiusToFahrenheit(temp);
     }
-    return newTemp;
+    return convertedTemp;
 }
 
 float Converter::convertDistance (float distance, char targetUnits)
 {
-    float newDistance = 0;
+    convertedDistance = 0;
     if (targetUnits == 'M')
     {
-        Converter::feetToMeters(distance);
-        distance = newDistance;
+        convertedDistance = feetToMeters(distance);
     }
 
     else if (targetUnits == 'I')
     {
-        Converter::metersToFeet(distance);
-        distance = newDistance;
+        convertedDistance = metersToFeet(distance);
     }
-    return newDistance;
+    return convertedDistance;
 }
 
 float Converter::fahrenheitToCelsius (float temp)
 {
-    float newTemp = ((temp - 32) / 1.8);
-    return newTemp;
+    temp = ((temp - 32) / 1.8);
+    return temp;
 }
 
 float Converter::celsiusToFahrenheit (float temp)
 {
-    float newTemp = ((temp * 1.8) + 32);
-    return newTemp;
+    temp = ((temp * 1.8) + 32);
+    return temp;
 }
 
 float Converter::feetToMeters (float distance)
 {
-    float newDistance = distance * 0.3048;
-    return newDistance;
+    distance = distance * 0.3048;
+    return distance;
 }
 
 float Converter::metersToFeet (float distance)
 {
-    float newDistance = distance / 0.3048;
-    return newDistance;
+    distance = distance / 0.3048;
+    return distance;
 }
 /*
  * Unit testing functions. Do not alter.
