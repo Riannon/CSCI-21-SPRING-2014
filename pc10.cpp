@@ -47,8 +47,7 @@ public:
     float convertDistance (float distance, char targetUnits);
 
 private:
-    float convertedTemp;
-    float convertedDistance;
+
     /* Called by convertTemperature if target units is 'M' */
     float fahrenheitToCelsius (float temp);
 
@@ -78,7 +77,7 @@ int main ()
 
 float Converter::convertTemperature (float temp, char targetUnits)
 {
-    convertedTemp = 0;
+    float convertedTemp = 0;
     if (targetUnits == 'M')
     {
         convertedTemp = fahrenheitToCelsius(temp);
@@ -92,7 +91,7 @@ float Converter::convertTemperature (float temp, char targetUnits)
 
 float Converter::convertDistance (float distance, char targetUnits)
 {
-    convertedDistance = 0;
+    float convertedDistance = 0;
     if (targetUnits == 'M')
     {
         convertedDistance = feetToMeters(distance);
