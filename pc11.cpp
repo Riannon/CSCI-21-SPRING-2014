@@ -28,10 +28,7 @@ class Prize
 {
 public:
     // CODE HERE -- DECLARE FUNCTIONS
-    /*Prize ();
-    Prize (string newName);
-    Prize (unsigned int newValue); */
-
+   
     /*
      * Constructor.
      * @param newName string containing a name for this Prize; default argument is "no name!";
@@ -51,6 +48,7 @@ public:
      * @return an unsigned int containing this Prize's value
      */
     unsigned int getValue();
+    
 private:
 
     string name;
@@ -73,9 +71,6 @@ public:
      * @param newPrize Prize containing a Prize that is "hidden" behind this secret door; default argument
      *        is Prize()
      */
-    /* SecretDoor ();
-     SecretDoor (unsigned int number);
-     SecretDoor (Prize prize); */
     SecretDoor (unsigned int newNumber = 1, Prize newPrize = Prize());
     /*
      * Get this SecretDoor's number.
@@ -87,6 +82,7 @@ public:
      * @return the Prize, by reference, "hidden behind" this SecretDoor
      */
     Prize getPrize();
+    
 private:
 
     unsigned int number;
@@ -106,9 +102,7 @@ int main ()
 }
 
 // CODE HERE -- FUNCTION DEFINITIONS FOR PRIZE; USE INITIALIZER SECTION FOR CONSTRUCTOR
-/*Prize::Prize () : name("no name!"), value(0) {}
-Prize::Prize (string newName) : value(0) {}
-Prize::Prize (unsigned int newValue) : name("no name!") {} */
+
 Prize::Prize (string newName, unsigned int newValue)
 {
     if (newValue > 100)
@@ -142,12 +136,11 @@ unsigned int Prize::getValue()
 }
 
 // CODE HERE -- FUNCTION DEFINITIONS FOR SECRETDOOR; USE INITIALIZER SECTION FOR CONSTRUCTOR
-/*SecretDoor::SecretDoor ()  {}
-SecretDoor::SecretDoor (unsigned int number) : prize() {}
-SecretDoor::SecretDoor (Prize prize) : number(1) {}*/
+
 SecretDoor::SecretDoor (unsigned int newNumber, Prize newPrize)
 {
-    number = newNumber, prize = newPrize;
+    number = newNumber;
+    prize = newPrize;
 }
 
 unsigned int SecretDoor::getNumber()
