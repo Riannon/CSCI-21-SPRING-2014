@@ -8,6 +8,10 @@ FLAGS = -Wall -Wextra -Werror -pedantic
 #    g++ $(FLAGS) filename.cpp -o filename
 
 
+# Target for programming challenge 11
+# Date completed: 3-05-2014
+pc11: pc11.cpp
+	g++ $(FLAGS) pc11.cpp -o pc11
 
 # Target for programming challenge 10
 # Date completed: 3-03-2014
@@ -66,6 +70,6 @@ pc1: pc1.cpp
 	
 	
 	
-all: pc1 pc2 pc3 pc4 pc5 pc6 pc7 project1 pc8 pc9
+#all: pc1 pc2 pc3 pc4 pc5 pc6 pc7 project1 pc8 pc9 pc10 pc11
 
 
