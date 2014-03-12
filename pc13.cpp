@@ -99,7 +99,7 @@ unsigned int countChars (string* theString, unsigned int& alpha, unsigned int& n
 {
     if (theString == 0)
     {
-        throw ArrayException("NULL STRING REFERENCE");
+        throw ArrayException ("NULL STRING REFERENCE");
     }
 
     int size = (*theString).length();
@@ -122,7 +122,7 @@ unsigned int countChars (string* theString, unsigned int& alpha, unsigned int& n
 bool findWord (string* theString, string theWord)
 {
     if ( theString == 0)
-        throw ArrayException("NULL STRING REFERENCE");
+        throw ArrayException ("NULL STRING REFERENCE");
 
     int wordSize = theWord.length();
     int stringSize = (*theString).length();
@@ -147,10 +147,10 @@ bool replaceWord (string* theString, string oldWord, string newWord)
 {
 
     if (theString == 0)
-        throw ArrayException("NULL STRING REFERENCE");
+        throw ArrayException ("NULL STRING REFERENCE");
 
     int oldWordSize = oldWord.length();
-    int stringSize = (*theString).length();  //sizeof(*theString);
+    int stringSize = (*theString).length(); 
     string* tempString = 0;
     bool isReplaced = false;
 
@@ -163,9 +163,6 @@ bool replaceWord (string* theString, string oldWord, string newWord)
             {
                 j++;
             }
-
-//"123, abc; 456: hello. 0!"
-
             if (j == oldWordSize)
             {
                 tempString = new string ((*theString).substr(0, i) + newWord + (*theString).substr(i + oldWordSize, stringSize));
