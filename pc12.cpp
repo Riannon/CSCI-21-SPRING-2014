@@ -91,6 +91,18 @@ void clearDynoIntArray (int*& theArray)
 
 int sum (int* theArray, unsigned int arraySize)
 {
+	//
+	// Grader comments 2014.03.12
+	//
+	// I'm guessing that your reason for using this variable
+	// is that when you tried to do this:
+	// for(int i = 0; i < arraySize; i++)
+	// you got a compiler error. Instead of using the extra
+	// variable, just do this instead:
+	// for(unsigned int i = 0; i < arraySize; i++)
+	//
+	// Make sense? Let me know if not. --Rob
+	//
     int size = arraySize;
     if (theArray == 0)
     {

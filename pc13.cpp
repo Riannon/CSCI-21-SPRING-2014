@@ -119,6 +119,17 @@ unsigned int countChars (string* theString, unsigned int& alpha, unsigned int& n
     return (*theString).length();
 }
 
+//
+// Grader comments 2014.03.13
+//
+// Wow, impressive work. You did it the hard way, but maybe you did it that
+// way on purpose? There are find and replace functions in the string class
+// that would have made your job much easier, but if you just wanted the
+// exercise, that's great. One idea for you: notice that you have a lot of
+// the same code in both findWord() and replaceWord(). Try moving the common
+// code into a separate function so when you have to fix a bug, you only
+// have to fix it in one place. But most importantly, this is awesome code. --Rob
+//
 bool findWord (string* theString, string theWord)
 {
     if ( theString == 0)
