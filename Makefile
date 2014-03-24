@@ -7,7 +7,11 @@ FLAGS = -Wall -Wextra -Werror -pedantic
 #filename: filename.cpp
 #    g++ $(FLAGS) filename.cpp -o filename
 
-
+# Target for programming challenge 14
+# Date completed: 3-24-2014
+pc14: pc14.cpp
+	g++ $(FLAGS) pc14.cpp -o pc14
+	
 # Target for programming challenge 13
 # Date completed: 3-12-2014
 pc13: pc13.cpp
