@@ -1,5 +1,4 @@
 # Makefile for programming challenges
-#
 # CSCI 21, Spring 2014
 #
 # Programmer: Kevan Johnson
