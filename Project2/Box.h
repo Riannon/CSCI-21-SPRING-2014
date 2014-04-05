@@ -1,3 +1,14 @@
+/*
+ * Programming Project 2
+ * Second programming challenge for CSCI 21. Implement the classes Prize & Box and
+ * the associated functions, default constructors, the overlaoded constructors,
+ * and the destructors as well as the driver. All sections labeled with "CODE HERE" need to be filled in.
+ *
+ * Kevan Johnson
+ * Date created: 4/01/14
+ * Last date modified: 4/04/14
+ *
+ */
 #include "Prize.h"
 #pragma once
 
