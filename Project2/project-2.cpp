@@ -529,7 +529,8 @@ void boxTest()
                 cout << "Enter the name of new prize: ";
                 string prizeName = reader.readString();
                 cout << "Enter the value of the new prize: ";
-                unsigned int prizeValue = reader.readInt();
+
+                unsigned int prizeValue = reader.readInt(0,5000000);
                 tester.addPrize(Prize(prizeName,prizeValue));
                 cout << "Prize added.\n\n";
             }
@@ -558,7 +559,7 @@ void boxTest()
             if (tester.getPrizeCount() > 0)
             {
                 cout << "Please enter the number of the prize to remove: ";
-                tester.removePrize(reader.readInt() - 1);
+                tester.removePrize(reader.readInt(1,tester.getPrizeCount()) - 1);
                 cout << "Prize removed.\n\n";
             }
             else
@@ -569,7 +570,7 @@ void boxTest()
         case 4:
             clearScreen();
             cout << "Enter the new number for this box: ";
-            tester.setBoxNumber(reader.readInt());
+            tester.setBoxNumber(reader.readInt(0,5000000));
             cout << "Box number changed.\n\n";
             break;
         case 5:
@@ -616,7 +617,7 @@ void prizeTest()
         case 2:
             clearScreen();
             cout << "Enter the new value for prize: ";
-            tester.setPrizeValue(reader.readInt());
+            tester.setPrizeValue(reader.readInt(0,5000000));
 
             cout << "Prize value changed.\n\n";
             break;
