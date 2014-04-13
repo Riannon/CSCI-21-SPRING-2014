@@ -11,7 +11,6 @@
 *
 */
 
-
 #include "SLNode.h"
 
 #include <cassert>
