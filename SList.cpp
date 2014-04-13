@@ -11,7 +11,6 @@
 *
 */
 
-
 #include "SList.h"
 
 #include <cassert>
