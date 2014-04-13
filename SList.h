@@ -1,14 +1,16 @@
 /*
-* Programming Challenge 18
-* Eighteenth programming challenge for CSCI 21. Complete the header SList.h
+* Programming Challenge 19
+* Nineteenth programming challenge for CSCI 21. Complete the header SList.h
 * and complete the implementation SList.cpp to pass the unit tests. Using
-* SLNode.cpp and SLNode.h from Programming Challenge 17.
+* SLNode.cpp and SLNode.h from Programming Challenge 17 and updated SList.h
+* and SList.cpp from challenge 18.
 *
 * Kevan Johnson
 * Date created: 4/08/14
-* Last date modified: 4/08/14
+* Last date modified: 4/13/14
 *
 */
+
 
 #include "SLNode.h"
 
@@ -21,7 +23,8 @@ using namespace std;
 #ifndef SLIST_H
 #define SLIST_H
 
-class SList {
+class SList
+{
 
 public:
     /*
@@ -40,9 +43,18 @@ public:
      */
     void insertHead(int newValue);
     /*
+     * Create new SLNode and attach as yail of list.
+     * @param newValue an integer with value of new tail
+     */
+    void insertTail(int newValue);
+    /*
      * Remove the head node from the list.
      */
     void removeHead();
+    /*
+    * Remove the tail node from the list.
+    */
+    void removeTail();
     /*
      * Clear the entire contents of the list, freeing all
      * memory associated with all nodes.

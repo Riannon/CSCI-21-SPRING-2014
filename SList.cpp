@@ -1,14 +1,16 @@
 /*
-* Programming Challenge 18
-* Eighteenth programming challenge for CSCI 21. Complete the header SList.h
+* Programming Challenge 19
+* Nineteenth programming challenge for CSCI 21. Complete the header SList.h
 * and complete the implementation SList.cpp to pass the unit tests. Using
-* SLNode.cpp and SLNode.h from Programming Challenge 17.
+* SLNode.cpp and SLNode.h from Programming Challenge 17 and updated SList.h
+* and SList.cpp from challenge 18.
 *
 * Kevan Johnson
 * Date created: 4/08/14
-* Last date modified: 4/08/14
+* Last date modified: 4/13/14
 *
 */
+
 
 #include "SList.h"
 
@@ -56,6 +58,28 @@ void SList::insertHead(int newValue)
 }
 
 /*
+ * Create new SLNode and attach as tail of list.
+ * @param newValue an integer with value of new tail
+ */
+void SList::insertTail(int newValue)
+{
+    if (size > 0)
+    {
+        SLNode *tempNode = head;
+        while (tempNode->getNextNode() != NULL)
+        {
+            tempNode = tempNode->getNextNode();
+        }
+        tempNode->setNextNode(new SLNode(newValue));
+    }
+    else
+    {
+        head = new SLNode(newValue);
+    }
+    size++;
+}
+
+/*
  * Remove the head node from the list.
  */
 void SList::removeHead()
@@ -68,6 +92,27 @@ void SList::removeHead()
     }
 }
 
+/*
+ * Remove the tail node from the list.
+ */
+void SList::removeTail()
+{
+    if (size > 1)
+    {
+        SLNode *tempNode = head;
+        while ((tempNode->getNextNode())->getNextNode() != NULL)
+        {
+            tempNode = tempNode->getNextNode();
+        }
+        tempNode->setNextNode(NULL);
+        size--;
+    }
+    else if (size == 1)
+    {
+        //delete head;
+        size--;
+    }
+}
 /*
  * Clear the entire contents of the list, freeing all
  * memory associated with all nodes.
