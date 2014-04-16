@@ -7,6 +7,11 @@ FLAGS = -Wall -Wextra -Werror -pedantic
 #    g++ $(FLAGS) filename.cpp -o filename
 
 
+# Target for programming challenge 20
+# Date completed: 4-16-2014
+pc20: SLNode.h SLNode.cpp pc20.cpp SList.cpp SList.h
+	g++ $(FLAGS) pc20.cpp SLNode.h SLNode.cpp SList.cpp SList.h -o pc20
+
 # Target for programming challenge 19
 # Date completed: 4-13-2014
 pc19: SLNode.h SLNode.cpp pc19.cpp SList.cpp SList.h

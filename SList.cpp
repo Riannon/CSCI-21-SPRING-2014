@@ -1,13 +1,13 @@
 /*
-* Programming Challenge 19
-* Nineteenth programming challenge for CSCI 21. Complete the header SList.h
+* Programming Challenge 20
+* Twentieth programming challenge for CSCI 21. Complete the header SList.h
 * and complete the implementation SList.cpp to pass the unit tests. Using
 * SLNode.cpp and SLNode.h from Programming Challenge 17 and updated SList.h
-* and SList.cpp from challenge 18.
+* and SList.cpp from challenges 19 & 18.
 *
 * Kevan Johnson
 * Date created: 4/08/14
-* Last date modified: 4/13/14
+* Last date modified: 4/16/14
 *
 */
 
@@ -111,6 +111,104 @@ void SList::removeTail()
         //delete head;
         size--;
     }
+}
+/*
+    * Create new SLNode and insert it in the correct position in
+    * the list so values are sorted in ascending order from head
+    * node to tail node.
+    * @param newValue an integer with value to insert
+    */
+void SList::insert(int newValue)
+{
+    if (size > 0)
+    {
+        SLNode* tempNode = head;
+        SLNode* insertNode = NULL;
+
+        while (tempNode->getNextNode() != NULL)
+        {
+            if (((tempNode->getContents() < newValue) && (tempNode->getNextNode()->getContents() > newValue)) || (tempNode->getContents() == newValue))
+            {
+                insertNode = new SLNode (newValue);
+                insertNode->setNextNode (tempNode->getNextNode());
+                tempNode->setNextNode (insertNode);
+                size++;
+                return;
+            }
+            else
+            {
+                tempNode = tempNode->getNextNode();
+            }
+        }
+        if (tempNode->getContents() < newValue)
+        {
+            insertTail(newValue);
+            return;
+        }
+        else if (tempNode->getContents() > newValue)
+        {
+            insertHead(newValue);
+            return;
+        }
+    }
+    else
+    {
+        head = new SLNode(newValue);
+        size++;
+    }
+}
+/*
+ * Remove the first appearance of parameter value.
+ * @param valueToRemove an integer with desired value to remove
+ * @return - returns true on sucess or false if value is not in the list
+ */
+bool SList::removeFirst(int valueToRemove)
+{
+    if (size != 0)
+    {
+        if (head->getContents() == valueToRemove)
+        {
+            removeHead();
+            return true;
+        }
+    }
+    else
+    {
+        return false;
+    }
+    if (size >= 2)
+    {
+        SLNode* tempNode = head;
+        SLNode* removeNode = NULL;
+        if (tempNode->getNextNode()->getContents() != valueToRemove)
+        {
+            while (tempNode->getNextNode()->getNextNode() != NULL)
+            {
+                if (tempNode->getNextNode()->getContents() == valueToRemove)
+                {
+                    break;
+                }
+                tempNode = tempNode->getNextNode();
+            }
+        }
+        if (tempNode->getNextNode()->getContents() == valueToRemove)
+        {
+            if (tempNode->getNextNode()->getContents() == 0)
+            {
+                removeTail();
+                return true;
+            }
+            else
+            {
+                removeNode = tempNode->getNextNode();
+                tempNode->setNextNode(removeNode->getNextNode());
+                removeNode = NULL;
+                size--;
+                return true;
+            }
+        }
+    }
+    return false;
 }
 /*
  * Clear the entire contents of the list, freeing all

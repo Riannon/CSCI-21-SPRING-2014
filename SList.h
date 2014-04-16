@@ -1,13 +1,13 @@
 /*
-* Programming Challenge 19
-* Nineteenth programming challenge for CSCI 21. Complete the header SList.h
+* Programming Challenge 20
+* Twentieth programming challenge for CSCI 21. Complete the header SList.h
 * and complete the implementation SList.cpp to pass the unit tests. Using
 * SLNode.cpp and SLNode.h from Programming Challenge 17 and updated SList.h
-* and SList.cpp from challenge 18.
+* and SList.cpp from challenges 19 & 18.
 *
 * Kevan Johnson
 * Date created: 4/08/14
-* Last date modified: 4/13/14
+* Last date modified: 4/16/14
 *
 */
 
@@ -54,6 +54,19 @@ public:
     * Remove the tail node from the list.
     */
     void removeTail();
+    /*
+    * Create new SLNode and insert it in the correct position in
+    * the list so values are sorted in ascending order from head
+    * node to tail node.
+    * @param newValue an integer with value to insert
+    */
+    void insert(int newValue);
+    /*
+     * Remove the first appearance of parameter value.
+     * @param valueToRemove an integer with desired value to remove
+     * @return - returns true on sucess or false if value is not in the list
+     */
+    bool removeFirst(int valueToRemove);
     /*
      * Clear the entire contents of the list, freeing all
      * memory associated with all nodes.
