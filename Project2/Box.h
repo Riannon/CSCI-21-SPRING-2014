@@ -52,10 +52,10 @@ public:
      * @param newBoxColor a string containing the desired color of the new box
      */
     void setBoxColor(string newBoxColor);
-     /*
-     * Get the box number.
-     * @return boxNumber an unsigned integer containing the number of the box
-     */
+    /*
+    * Get the box number.
+    * @return boxNumber an unsigned integer containing the number of the box
+    */
     unsigned int getBoxNumber();
     /*
      * Get the box color.

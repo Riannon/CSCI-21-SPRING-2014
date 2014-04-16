@@ -10,7 +10,6 @@
  *
  */
 #include "Box.h"
-#pragma once
 
 #include <cstdlib>
 #include <iostream>
@@ -106,7 +105,7 @@ Prize Box::removePrize(unsigned int index)
         prizes[index] = scratch;
         if (prizes[index] == scratch)
         {
-            for (int i = index; i < prizeCount; i++)
+            for (unsigned int i = index; i < prizeCount; i++)
             {
                 prizes[i-1] = prizes[i];
                 prizes[i] = scratch;
@@ -115,6 +114,5 @@ Prize Box::removePrize(unsigned int index)
             return prizeToRemove;
         }
     }
-    else
-        return scratch;
+    return scratch;
 }

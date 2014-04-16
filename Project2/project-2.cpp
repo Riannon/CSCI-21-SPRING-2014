@@ -27,10 +27,10 @@ CinReader reader;
  */
 void clearScreen();
 /*
- * This is function pause.This function
+ * This is function pause. This function
  * "pauses" screen so player can read screen.
  */
-void pause();
+void pauseScreen();
 /*
  * This is function boxTest. This function
  * calls boxTest menu.
@@ -82,7 +82,7 @@ int main ()
             quit = true;
             break;
         }
-        pause();
+        pauseScreen();
     }
     while (quit == false);
     return 0;
@@ -479,7 +479,6 @@ void btassert (A assertion)
         throw X();
 }
 
-
 void clearScreen()
 {
 #ifdef _WIN32
@@ -490,7 +489,7 @@ void clearScreen()
 }
 
 
-void pause()
+void pauseScreen()
 {
     cout << "Press ENTER to Continue";
     reader.readString();
@@ -583,7 +582,7 @@ void boxTest()
             quitBox = true;
             break;
         }
-        pause();
+        pauseScreen();
     }
     while (quitBox == false);
 }
@@ -625,8 +624,10 @@ void prizeTest()
             quitPrize = true;
             break;
         }
-        pause();
+        pauseScreen();
     }
     while (quitPrize == false);
 }
+
+
 
