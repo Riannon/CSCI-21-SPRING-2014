@@ -24,6 +24,11 @@ pc18: SLNode.h SLNode.cpp pc18.cpp SList.cpp SList.h
 	
 # Target for programming challenge 17
 # Date completed: 4-07-2014
+#
+# Grader comments 2014.04.09
+# The "SLNode.h" in the compiler command causes
+# the compile to fail.
+#
 pc17: SLNode.h SLNode.cpp pc17.cpp
 	g++ $(FLAGS) pc17.cpp SLNode.h SLNode.cpp -o pc17
 
